@@ -18,7 +18,6 @@ export const generateToken = (payload: JwtPayload): string => {
     const expiresIn = '1h';
 
     if (!secret) {
-        // É crucial que a chave secreta esteja definida!
         throw new Error('JWT_SECRET not defined in environment variables. Please set it in your .env file.');
     }
 
